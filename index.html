@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>井字游戏</title>
+    <link rel="stylesheet" href="style.css" media="screen">
+    <script src="javascript.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="player">
+        <div id="p1">
+          <span class="caret" hidden="hidden"></span>
+        </div>
+        <div class="vs"> </div>
+        <div id="p2">
+          <span class="caret" hidden="hidden"></span>
+        </div>
+        <button type="button" class="dice" id="dice-p1"></button>
+        <button type="button" class="dice" id="dice-p2"></button>
+
+      </div>
+
+    <div class="playground">
+      <div class="row">
+        <div class="square" data-index="0"></div>
+        <div class="square" data-index="1"></div>
+        <div class="square" data-index="2"></div>
+      </div>
+      <div class="row">
+        <div class="square" data-index="3"></div>
+        <div class="square" data-index="4"></div>
+        <div class="square" data-index="5"></div>
+      </div>
+      <div class="row">
+        <div class="square" data-index="6"></div>
+        <div class="square" data-index="7"></div>
+        <div class="square" data-index="8"></div>
+      </div>
+
+      <div class="overlay" >
+        <button type="button" class="btn start">Start</button>
+        <div class="winner" hidden="hidden">
+            <img class="badge" src="imag/win.svg" alt="Winner" />
+            <div class="logo"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button type="button" class="btn reset">Reset</button>
+    </div>
+  </div>
+  </body>
+</html>

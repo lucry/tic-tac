@@ -1,0 +1,236 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  background: #f8f8f8;
+}
+
+a {
+  color: #0d77cc;
+  text-decoration: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.container {
+  width: 27rem;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.player {
+  width: 27rem;
+  margin: auto;
+  position: relative;
+}
+
+.row {
+  border-bottom: 1px solid #ccc;
+}
+
+.player, .row {
+  display: flex;
+}
+
+.player > div {
+  flex: 1;
+  height: 9rem;
+  background-size: 80%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.player .vs {
+  background-size: 60%;
+  background-image: url('imag/vs.png');
+}
+
+.player .dice {
+  width: 1.5rem;
+  height: 1.5rem;
+  bottom: .5rem;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+  -webkit-appearance: none;
+  background: url('imag/dice.svg') no-repeat 50% 50%;
+}
+
+.player #p1, .players, #p2 {
+  position: relative;
+}
+
+.player .caret {
+  top: -3px;
+  left: 3.5rem;
+  position: absolute;
+  opacity: .85;
+  border-top: 1rem solid #555;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+}
+
+.player #dice-p1 {
+  left: 80px;
+}
+
+.player #dice-p2 {
+  right: 80px;
+}
+
+.player .piece1, .square.piece1 {
+  background-size: 85%;
+  background-image: url('imag/piece1.png');
+}
+
+.player .piece2, .square.piece2 {
+  background-size: 55%;
+  background-image: url('imag/piece2.png');
+}
+
+.player .piece3, .square.piece3 {
+  background-image: url('imag/piece3.png');
+}
+
+.player .piece4, .square.piece4 {
+  background-size: 57%;
+  background-image: url('imag/piece4.png');
+}
+
+.playground {
+  margin: 10px 0;
+  border-radius: 2px;
+  background: #fff;
+  position: relative;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 2px #ccc;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.playground .overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  transform: scale(1);
+  transition: all .5s ease;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, .9);
+}
+
+.playground .overlay.minimize {
+  transform: scale(0);
+}
+
+.square {
+  flex: 1;
+  height: 9rem;
+  cursor: pointer;
+  background-size: 80%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border-right: 1px solid #ccc;
+}
+
+.square:last-child {
+  border-right: 0;
+}
+
+.controls {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.winner {
+  z-index: 10;
+  top: -1rem;
+  position: relative;
+}
+
+.winner .badge {
+  width: 10rem;
+  margin: auto;
+  display: block;
+}
+
+.winner .logo {
+  width: 15rem;
+  height: 15rem;
+  top: -1rem;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.winner.piece1 .logo {
+  background-image: url('imag/piece1.png');
+  left: 1rem;
+}
+
+.winner.piece2 .logo {
+  background-image: url('imag/piece2.png');
+  left: 3rem;
+}
+
+.winner.piece3 .logo {
+  background-image: url('imag/piece3.png');
+  left: 2rem;
+}
+
+.winner.piece4 .logo {
+  background-image: url('imag/piece4.png');
+  left: 3rem;
+}
+
+.btn {
+  width: 100px;
+  height: 36px;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  -webkit-appearance: none;
+  box-shadow: 0 0 1px #ccc;
+}
+
+.btn[disabled] {
+  background: #ccc !important;
+  cursor: not-allowed !important;
+}
+
+.btn.start {
+  z-index: 10;
+  background: #23d87c;
+}
+
+.btn.reset {
+  background: #ff9800;
+}
+
+.credits .twhy {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.credits .twhy .github {
+  margin-right: 10px;
+}
+
+.credits .icon {
+  color: #666;
+}
